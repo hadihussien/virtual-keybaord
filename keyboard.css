@@ -1,0 +1,138 @@
+*{
+    font-family: 'Red Hat Text', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+i{
+    font-family: 'FontAwesome';
+}
+:root{
+    --main-color:#438f43;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media (min-width:768px) {
+    .container{
+        width: 700px;
+    }
+}
+@media (min-width:991px) {
+    .container{
+        width: 900px;
+    }
+}
+@media (min-width:1199px) {
+    .container{
+        width: 1100px;
+    }
+}
+h1{
+    text-align: center;
+    color: var(--main-color);
+    padding: 40px 0;
+}
+body{
+    height: 100vh;
+}
+body .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width:768px) {
+    body .content{
+        flex-direction: column;
+    }
+    body .content ul{
+        margin-bottom: 20px;
+    }
+}
+body .content span{
+    color: var(--main-color);
+    font-weight: bold;
+}
+body .content textarea{
+    outline: none;
+    border: 1px solid #bbb;
+    width: 230px;
+    padding: 1em;
+    height:20px;
+}
+body .keyboard{
+    height: 50%;
+    position: absolute;
+    bottom: 0%;
+    background-color: #12423e;
+    width: 100%;
+    display: none;
+}
+body .keyboard.active{
+    display: block;
+}
+body .keyboard .container{
+    width: 600px;
+    margin: 40px auto;
+}
+body .keyboard .container + button{
+    margin-left: 20px;
+}
+body .keyboard button{
+    padding: 1em 1.2em;
+    background: #ffffff36;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin: .3em .4em;
+}
+@media (max-width:768px) {
+    body .keyboard .container{
+        width: 100%;
+        margin: 10px 0;
+        padding: 0;
+    }
+    body .keyboard button{
+        padding: 1em 0.7em;
+    }
+}
+body .keyboard button:hover{
+    background-color: #eeeeee73;
+}
+body .keyboard .special{
+    padding:1em 2.4em;
+}
+body .keyboard .caps{
+    position: relative;
+}
+body .keyboard .caps::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    top: 6px;
+    border: 1px solid white;
+    right: 6px;
+    border-radius: 10px;
+}
+body .keyboard .caps.active::after{
+    background-color: white;
+}
+body .keyboard .first ,body .keyboard .second,body .keyboard .three,body .keyboard .four{
+    display: flex;
+    justify-content: center;
+}
+@media (max-width:768px){
+    body .keyboard .special{
+        padding: 1em .7em;
+    }
+}
+body .keyboard .space{
+    padding: 1em 8em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
